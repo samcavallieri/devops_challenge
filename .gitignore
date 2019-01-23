@@ -117,6 +117,10 @@ nbproject
 .idea
 .node_history
 .vscode
+.dockerignore
+node_modules
+npm-debug.log
+Dockerfile
 
 ### Terraform ###
 .terraform
