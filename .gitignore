@@ -116,3 +116,15 @@ npm-debug.log
 nbproject
 .idea
 .node_history
+.vscode
+.dockerignore
+node_modules
+npm-debug.log
+Dockerfile
+
+### Terraform ###
+.terraform
+*tfstate*
+*.key
+*.pub
+*mykey*
