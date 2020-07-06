@@ -1,0 +1,22 @@
+version: '3'
+services: 
+  db:
+    image: postgres:9.6.2-alpine
+    environment:
+      POSTGRES_USER: cami
+      POSTGRES_PASSWORD: devops123
+      POSTGRES_DB: devops
+    ports:
+      - "5432:5432"
+  api:
+    build: 
+      context: ./api
+    environment:
+      DB: postgres://cami:devops123@db:5432/devops
+  web:
+    build:
+      context: ./web
+    ports:
+      - "8080:3000"
+    environment:
+      API_HOST: http://api:3000
